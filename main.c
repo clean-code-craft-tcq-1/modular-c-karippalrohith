@@ -68,6 +68,7 @@ void testPairToNumber(
 }
 
 int main() {
+    //test
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
 
