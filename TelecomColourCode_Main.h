@@ -15,7 +15,7 @@
  ============================================================================*/
  /*------ standard includes -------*/
 #include <stdio.h>
-
+const int MAX_COLORPAIR_NAME_CHARS = 16;
 enum MajorColor_e{
 	WHITE, 				/*0*/
 	RED, 				/*1*/
