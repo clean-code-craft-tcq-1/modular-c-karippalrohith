@@ -20,7 +20,7 @@
 
 
 /*------ module includes --------*/
-#include "mainColor.h"
+#include "Telecom_Colour_Code_Main.h"
 
 /*=============================================================================
  =======               DEFINES & MACROS FOR GENERAL PURPOSE              =======
