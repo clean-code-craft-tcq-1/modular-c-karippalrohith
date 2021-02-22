@@ -21,16 +21,16 @@ enum MajorColor_e{
 	WHITE, 				/*0*/
 	RED, 				/*1*/
 	BLACK, 				/*2*/
-	YELLOW,             /*3*/
-	VIOLET              /*4*/
+	YELLOW,             		/*3*/
+	VIOLET              		/*4*/
 };
 
 enum MinorColor_e{
-	BLUE, 				/*0*/
-	ORANGE,             /*1*/
-	GREEN,              /*2*/
-	BROWN,              /*3*/
-	SLATE               /*4*/
+	BLUE, 			/*0*/
+	ORANGE,             	/*1*/
+	GREEN,              	/*2*/
+	BROWN,              	/*3*/
+	SLATE               	/*4*/
 };
 
 typedef struct {
