@@ -36,9 +36,6 @@ const int MAX_COLORPAIR_NAME_CHARS = 16;
  =======                VARIABLES & MESSAGES & RESSOURCEN                =======
  ==============================================================================*/
  
-int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
-int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
-
 
 /*=============================================================================
  =======                              METHODS                            =======
