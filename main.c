@@ -1,39 +1,62 @@
+/* ******************************************************************************
+ ***
+ ***     \file        main.c
+ ***     \ingroup     Session1-TCQ
+ ***     \author      Rohith K N
+ ***
+ ***     \brief       Source file to explore more about code modularity
+ ***
+ ***     \par         File_description
+ ***                  This file explores more about code modularity
+ ***
+ *****************************************************************************/
+ 
+/*=============================================================================
+ =======                            INCLUDES                             =======
+ ============================================================================*/
+ /*------ standard includes -------*/
 #include <stdio.h>
 #include <assert.h>
 
-enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
-enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
-const char* MajorColorNames[] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
-int numberOfMajorColors =
-    sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-const char* MinorColorNames[] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
+/*------ module includes --------*/
+#include "Test_Code1.h"
+
+/*=============================================================================
+ =======               DEFINES & MACROS FOR GENERAL PURPOSE              =======
+ =============================================================================*/
+
+/*=============================================================================
+ =======                       CONSTANTS  &  TYPES                       =======
+ =============================================================================*/
+ 
 const int MAX_COLORPAIR_NAME_CHARS = 16;
-int numberOfMinorColors =
-    sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
-typedef struct {
-    enum MajorColor majorColor;
-    enum MinorColor minorColor;
-} ColorPair;
+/*=============================================================================
+ =======                VARIABLES & MESSAGES & RESSOURCEN                =======
+ ==============================================================================*/
+ 
+int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
+int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
 
+
+/*=============================================================================
+ =======                              METHODS                            =======
+ =============================================================================*/
+ 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
-        MajorColorNames[colorPair->majorColor],
-        MinorColorNames[colorPair->minorColor]);
+        MajorColorNames_a[colorPair->majorColor],
+        MinorColorNames_a[colorPair->minorColor]);
 }
 
 ColorPair GetColorFromPairNumber(int pairNumber) {
     ColorPair colorPair;
     int zeroBasedPairNumber = pairNumber - 1;
     colorPair.majorColor = 
-        (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
+        (enum MajorColor_e)(zeroBasedPairNumber / numberOfMinorColors);
     colorPair.minorColor =
-        (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
+        (enum MinorColor_e)(zeroBasedPairNumber % numberOfMinorColors);
     return colorPair;
 }
 
@@ -43,8 +66,8 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
 }
 
 void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
+    enum MajorColor_e expectedMajor,
+    enum MinorColor_e expectedMinor)
 {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
@@ -55,8 +78,8 @@ void testNumberToPair(int pairNumber,
 }
 
 void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
+    enum MajorColor_e major,
+    enum MinorColor_e minor,
     int expectedPairNumber)
 {
     ColorPair colorPair;
