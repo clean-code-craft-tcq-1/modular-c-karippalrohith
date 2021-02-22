@@ -16,6 +16,7 @@
  ============================================================================*/
  /*------ standard includes -------*/
 #include <stdio.h>
+#include <assert.h>
 
  /*------ module includes -------*/
 #include "TelecomColourCode_TestCombination.h"
