@@ -1,5 +1,4 @@
 /* ******************************************************************************
- ***
  ***     \file        main.c
  ***     \ingroup     Session1-TCQ
  ***     \author      Rohith K N
@@ -45,3 +44,6 @@ const char* MajorColorNames_a[] = {
 const char* MinorColorNames_a[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
+
+int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
+int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
