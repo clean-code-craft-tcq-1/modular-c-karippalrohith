@@ -19,7 +19,7 @@
 #include <assert.h>
 
  /*------ module includes -------*/
-#include "TelecomColourCode_TestCombination.h"
+#include "TelecomColourCode_Main.h"
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
