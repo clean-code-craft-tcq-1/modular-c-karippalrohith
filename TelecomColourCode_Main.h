@@ -9,7 +9,8 @@
  ***                  This file explores more about code modularity
  ***
  *****************************************************************************/
- 
+ #ifndef TELECOM_COLOR_CODE_MAIN_H_
+#define TELECOM_COLOR_CODE_MAIN_H_
 /*=============================================================================
  =======                            INCLUDES                             =======
  ============================================================================*/
@@ -57,3 +58,5 @@ void ColorPairToString(const ColorPair* colorPair, char* buffer);
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 int GetPairNumberFromColor(const ColorPair* colorPair);
+
+#endif /*TELECOM_COLOR_CODE_MAIN_H_*/
