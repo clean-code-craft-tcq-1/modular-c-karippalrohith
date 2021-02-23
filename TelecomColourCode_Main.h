@@ -50,3 +50,10 @@ int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 void testNumberToPair(int pairNumber, enum MajorColor_e expectedMajor, enum MinorColor_e expectedMinor);
+
+void testNumberToPair(int pairNumber, enum MajorColor_e expectedMajor, enum MinorColor_e expectedMinor);
+ColorPair GetColorFromPairNumber(int pairNumber);
+void ColorPairToString(const ColorPair* colorPair, char* buffer);
+
+void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
+int GetPairNumberFromColor(const ColorPair* colorPair);
