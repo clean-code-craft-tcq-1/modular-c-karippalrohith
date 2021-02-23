@@ -29,7 +29,8 @@
 /*=============================================================================
  =======                       CONSTANTS  &  TYPES                       =======
  =============================================================================*/
-
+int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
+int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
 /*=============================================================================
  =======                VARIABLES & MESSAGES & RESSOURCEN                =======
  ==============================================================================*/
