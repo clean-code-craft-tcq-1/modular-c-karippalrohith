@@ -22,7 +22,7 @@
 #include "TelecomColourCode_Main.h"
 
 int GetPairNumberFromColor(const ColorPair* colorPair) {
-    return colorPair->majorColor * numberOfMinorColors +
+    return colorPair->majorColor * numberOfMinorColors_i +
             colorPair->minorColor + 1;
 }
 
