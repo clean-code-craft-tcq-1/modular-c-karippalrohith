@@ -17,6 +17,9 @@
  /*------ standard includes -------*/
 #include <stdio.h>
 
+ /*------ module includes -------*/
+#include "TelecomColourCode_Main.h"
+
 /*---------------------------------------------------------------------------*/
 /*     FUNCTION: TCC_printColourCodeReference_Table
  */
