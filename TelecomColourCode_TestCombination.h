@@ -22,8 +22,7 @@
 
 void testNumberToPair(int pairNumber, enum MajorColor_e expectedMajor, enum MinorColor_e expectedMinor);
 ColorPair GetColorFromPairNumber(int pairNumber);
-void ColorPairToString1(const ColorPair* colorPair, char* buffer);
+void ColorPairToString(const ColorPair* colorPair, char* buffer);
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 int GetPairNumberFromColor(const ColorPair* colorPair);
-void ColorPairToString(const ColorPair* colorPair, char* buffer);
