@@ -29,7 +29,17 @@
 /*=============================================================================
  =======                       CONSTANTS  &  TYPES                       =======
  =============================================================================*/
- 
+ const char* MajorColorNames_a[] = {
+    "White", "Red", "Black", "Yellow", "Violet"
+};
+
+const char* MinorColorNames_a[] = {
+    "Blue", "Orange", "Green", "Brown", "Slate"
+};
+
+int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
+int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
+
 /*=============================================================================
  =======                VARIABLES & MESSAGES & RESSOURCEN                =======
  ==============================================================================*/
