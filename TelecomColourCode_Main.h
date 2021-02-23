@@ -38,16 +38,6 @@ typedef struct {
     enum MinorColor_e minorColor;
 } ColorPair;
 
-const char* MajorColorNames_a[] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
-
-const char* MinorColorNames_a[] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
-
-int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
-int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 void testNumberToPair(int pairNumber, enum MajorColor_e expectedMajor, enum MinorColor_e expectedMinor);
