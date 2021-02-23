@@ -1,6 +1,6 @@
 /* ******************************************************************************
  ***
- ***     \file        main.c
+ ***     \file        TelecomColourCode_Main.c
  ***     \ingroup     Session1-TCQ
  ***     \author      Rohith K N
  ***
@@ -17,7 +17,6 @@
  /*------ standard includes -------*/
 #include <stdio.h>
 #include <assert.h>
-
 
 /*------ module includes --------*/
 #include "TelecomColourCode_Main.h"
@@ -37,8 +36,8 @@ const char* MinorColorNames_a[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
 
-int numberOfMajorColors = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
-int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
+int numberOfMajorColors_i = sizeof(MajorColorNames_a) / sizeof(MajorColorNames_a[0]);
+int numberOfMinorColors_i = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0]);
 /*=============================================================================
  =======                VARIABLES & MESSAGES & RESSOURCEN                =======
  ==============================================================================*/
@@ -49,7 +48,7 @@ int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0
  =============================================================================*/
  
 int main() {
-    int colourIndex;
+    int colourIndex_i;
  
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
@@ -58,10 +57,10 @@ int main() {
     testPairToNumber(VIOLET, SLATE, 25);
     
     /*Print Colour Reference*/
-    printf("Colour Code   Major Colour   Minor Colour\n");
-    for(colourIndex = 1; colourIndex <= MAX_COLORPAIR_NAME_CHARS; colourIndex++)
+    printf("Colour Code   Major Colour::Minor Colour\n");
+    for(colourIndex_i = 1; colourIndex_i <= MAX_COLORPAIR_NAME_CHARS; colourIndex_i++)
     {
-        printColourCodeReference_Table(colourIndex);
+        printColourCodeReference_Table(colourIndex_i);
     }
  
     return 0;
