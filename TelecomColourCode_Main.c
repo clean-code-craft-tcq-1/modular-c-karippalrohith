@@ -58,7 +58,7 @@ int main() {
     testPairToNumber(VIOLET, SLATE, 25);
     
     /*Print Colour Reference*/
-    printf("Colour Code   Major Colour   Minor Colour");
+    printf("Colour Code   Major Colour   Minor Colour\n");
     for(colourIndex = 1; colourIndex <= MAX_COLORPAIR_NAME_CHARS; colourIndex++)
     {
         printColourCodeReference_Table(colourIndex);
