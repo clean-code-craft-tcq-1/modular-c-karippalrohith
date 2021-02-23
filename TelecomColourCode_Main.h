@@ -9,7 +9,7 @@
  ***                  This file explores more about code modularity
  ***
  *****************************************************************************/
- #ifndef TELECOM_COLOR_CODE_MAIN_H_
+#ifndef TELECOM_COLOR_CODE_MAIN_H_
 #define TELECOM_COLOR_CODE_MAIN_H_
 /*=============================================================================
  =======                            INCLUDES                             =======
