@@ -19,7 +19,7 @@
 #include <assert.h>
 
  /*------ module includes -------*/
-#include "TelecomColourCode_TestCombination.h"
+#include "TelecomColourCode_Main.h"
 
 int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
