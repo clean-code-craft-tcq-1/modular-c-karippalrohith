@@ -58,7 +58,7 @@ int main() {
     testPairToNumber(VIOLET, SLATE, 25);
     
     /*Print Colour Reference*/
-    for(colourIndex = 0; colourIndex < 25; colourIndex++)
+    for(colourIndex = 0; colourIndex < MAX_COLORPAIR_NAME_CHARS; colourIndex++)
     {
         printColourCodeReference_Table(colourIndex);
     }
