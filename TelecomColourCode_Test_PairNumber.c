@@ -1,6 +1,6 @@
 /* ******************************************************************************
  ***
- ***     \file        main.c
+ ***     \file        TelecomColourCode_Test_PairNumber.c
  ***     \ingroup     Session1-TCQ
  ***     \author      Rohith K N
  ***
@@ -21,14 +21,35 @@
  /*------ module includes -------*/
 #include "TelecomColourCode_Main.h"
 
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION: TCC_ColorPairToString
+ */
+/*!    \brief   Function to convert the elements to a string
+ *
+ *
+ *     \param    colorPair -> 
+				 buffer -> 
+ *     \returns  void
+ *
+ *//*------------------------------------------------------------------------*/
+void TCC_ColorPairToString(const ColorPair_s* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
         MajorColorNames_a[colorPair->majorColor],
         MinorColorNames_a[colorPair->minorColor]);
 }
 
-ColorPair GetColorFromPairNumber(int pairNumber) {
-    ColorPair colorPair;
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION: TCC_GetColorFromPairNumber
+ */
+/*!    \brief   Function to derive the major and Minor colours from the Pair code
+ *
+ *
+ *     \param    pairNumber -> Pair number to be split into Major and Minor
+ *     \returns  ColorPair_s
+ *
+ *//*------------------------------------------------------------------------*/
+ColorPair_s TCC_GetColorFromPairNumber(int pairNumber) {
+    ColorPair_s colorPair;
     int zeroBasedPairNumber = pairNumber - 1;
     colorPair.majorColor = 
         (enum MajorColor_e)(zeroBasedPairNumber / numberOfMinorColors_i);
@@ -37,22 +58,44 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
     return colorPair;
 }
 
-void testNumberToPair(int pairNumber,
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION: TCC_testPairNumber_AgaintColours
+ */
+/*!    \brief   Function to derive the Pair code from the major and Minor colours
+ *
+ *
+ *     \param    pairNumber -> Pair number to be split into Major and Minor
+				 expectedMajor -> Expected Major Colour of the respective pair code
+				 expectedMinor -> Expected Minor Colour of the respective pair code
+ *     \returns  void
+ *
+ *//*------------------------------------------------------------------------*/
+void TCC_testPairNumber_AgaintColours(int pairNumber,
     enum MajorColor_e expectedMajor,
     enum MinorColor_e expectedMinor)
 {
-    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    ColorPairToString(&colorPair, colorPairNames);
+    ColorPair_s colorPair = TCC_GetColorFromPairNumber(pairNumber);
+    char colorPairNames[MAX_COLORPAIR];
+    TCC_ColorPairToString(&colorPair, colorPairNames);
     printf("Got pair %s\n", colorPairNames);
     assert(colorPair.majorColor == expectedMajor);
     assert(colorPair.minorColor == expectedMinor);
 }
 
-void printColourCodeReference_Table(int colourIndex_i)
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION: TCC_printColourCodeReference_Table
+ */
+/*!    \brief   Function to derive the Pair code from the major and Minor colours
+ *
+ *
+ *     \param    colourIndex_i -> This varies from 1-25 for all the combinations
+ *     \returns  void
+ *
+ *//*------------------------------------------------------------------------*/
+void TCC_printColourCodeReference_Table(int colourIndex_i)
 {
-    ColorPair colorPair = GetColorFromPairNumber(colourIndex_i);
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    ColorPairToString(&colorPair, colorPairNames);
+    ColorPair_s colorPair = TCC_GetColorFromPairNumber(colourIndex_i);
+    char colorPairNames[MAX_COLORPAIR];
+    TCC_ColorPairToString(&colorPair, colorPairNames);
     printf("Pair %d\t\t%s\n", colourIndex_i, colorPairNames);
 }
