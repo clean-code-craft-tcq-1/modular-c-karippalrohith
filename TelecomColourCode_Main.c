@@ -58,9 +58,8 @@ int main() {
     testPairToNumber(VIOLET, SLATE, 25);
     
     /*Print Colour Reference*/
-    for(colourIndex = 0; colourIndex < MAX_COLORPAIR_NAME_CHARS; colourIndex++)
+    for(colourIndex = 1; colourIndex <= MAX_COLORPAIR_NAME_CHARS; colourIndex++)
     {
-     printf("Id %d\n", colourIndex);
         printColourCodeReference_Table(colourIndex);
     }
  
