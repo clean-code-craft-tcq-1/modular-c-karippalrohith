@@ -1,5 +1,5 @@
 /* ******************************************************************************
- ***     \file        main.c
+ ***     \file        TelecomColourCode_Main.h
  ***     \ingroup     Session1-TCQ
  ***     \author      Rohith K N
  ***
@@ -42,8 +42,8 @@ extern const char* MajorColorNames_a[];
 
 extern const char* MinorColorNames_a[];
 
-extern int numberOfMajorColors;
-extern int numberOfMinorColors;
+extern int numberOfMajorColors_i;
+extern int numberOfMinorColors_i;
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 void testNumberToPair(int pairNumber, enum MajorColor_e expectedMajor, enum MinorColor_e expectedMinor);
@@ -54,5 +54,5 @@ void ColorPairToString(const ColorPair* colorPair, char* buffer);
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 int GetPairNumberFromColor(const ColorPair* colorPair);
-void printColourCodeReference_Table(int colourIndex);
+void printColourCodeReference_Table(int colourIndex_i);
 #endif /*TELECOM_COLOR_CODE_MAIN_H_*/
