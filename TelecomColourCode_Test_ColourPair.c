@@ -1,10 +1,10 @@
 /* ******************************************************************************
  ***
- ***     \file        main.c
+ ***     \file        TelecomColourCode_Test_ColourPair.c
  ***     \ingroup     Session1-TCQ
  ***     \author      Rohith K N
  ***
- ***     \brief       Source file to explore more about code modularity
+ ***     \brief       Source file to test the colour pair from Major and Minor colours
  ***
  ***     \par         File_description
  ***                  This file explores more about code modularity
@@ -21,20 +21,42 @@
  /*------ module includes -------*/
 #include "TelecomColourCode_Main.h"
 
-int GetPairNumberFromColor(const ColorPair* colorPair) {
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION: TCC_GetPairNumberFromColor
+ */
+/*!    \brief   Function to derive the Pair code from the major and Minor colours
+ *
+ *
+ *     \param    none
+ *     \returns  int
+ *
+ *//*------------------------------------------------------------------------*/
+int TCC_GetPairNumberFromColor(const ColorPair_s* colorPair) {
     return colorPair->majorColor * numberOfMinorColors_i +
             colorPair->minorColor + 1;
 }
 
-void testPairToNumber(
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION: TCC_testColours_AgainstPairNumber
+ */
+/*!    \brief   Function to test pair code from Colour code
+ *				
+ *
+ *     \param    major(enum) -> Major Colour
+				 minor(enum) -> Minor Colour
+				 expectedPairNumber -> Respective pair code of the referred Major and Minor colour
+ *     \returns  void
+ *
+ *//*------------------------------------------------------------------------*/
+void TCC_testColours_AgainstPairNumber(
     enum MajorColor_e major,
     enum MinorColor_e minor,
     int expectedPairNumber)
 {
-    ColorPair colorPair;
+    ColorPair_s colorPair;
     colorPair.majorColor = major;
     colorPair.minorColor = minor;
-    int pairNumber = GetPairNumberFromColor(&colorPair);
+    int pairNumber = TCC_GetPairNumberFromColor(&colorPair);
     printf("Got pair number %d\n", pairNumber);
     assert(pairNumber == expectedPairNumber);
 }
