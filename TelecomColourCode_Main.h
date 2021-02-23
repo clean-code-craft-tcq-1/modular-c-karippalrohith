@@ -16,7 +16,7 @@
  ============================================================================*/
  /*------ standard includes -------*/
 #include <stdio.h>
-#define MAX_COLORPAIR_NAME_CHARS 16
+#define MAX_COLORPAIR_NAME_CHARS 25
 enum MajorColor_e{
 	WHITE, 				/*0*/
 	RED, 				/*1*/
@@ -54,5 +54,5 @@ void ColorPairToString(const ColorPair* colorPair, char* buffer);
 
 void testPairToNumber(enum MajorColor_e major, enum MinorColor_e minor, int expectedPairNumber);
 int GetPairNumberFromColor(const ColorPair* colorPair);
-
+void printColourCodeReference_Table(int colourIndex);
 #endif /*TELECOM_COLOR_CODE_MAIN_H_*/
