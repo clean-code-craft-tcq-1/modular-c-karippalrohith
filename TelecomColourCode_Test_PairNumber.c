@@ -54,5 +54,6 @@ void printColourCodeReference_Table(int colourIndex)
     ColorPair colorPair = GetColorFromPairNumber(colourIndex);
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
     ColorPairToString(&colorPair, colorPairNames);
-    printf("Pair %d\t%s\n", colourIndex, colorPairNames);
+    //printf("Pair %d\t%s\n", colourIndex, colorPairNames);
+    printf("Pair %d\n", colourIndex);
 }
