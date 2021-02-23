@@ -21,12 +21,6 @@
  /*------ module includes -------*/
 #include "TelecomColourCode_TestCombination.h"
 
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
-    sprintf(buffer, "%s %s",
-        MajorColorNames_a[colorPair->majorColor],
-        MinorColorNames_a[colorPair->minorColor]);
-}
-
 int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
