@@ -49,12 +49,19 @@ int numberOfMinorColors = sizeof(MinorColorNames_a) / sizeof(MinorColorNames_a[0
  =============================================================================*/
  
 int main() {
-    //test
+    int colourIndex;
+ 
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
 
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
-
+    
+    /*Print Colour Reference*/
+    for(colourIndex = 0; colourIndex < 25; colourIndex++)
+    {
+        printColourCodeReference_Table(colourIndex);
+    }
+ 
     return 0;
 }
