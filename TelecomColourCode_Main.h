@@ -38,11 +38,11 @@ typedef struct {
     enum MinorColor_e minorColor;
 } ColorPair;
 
-const char* MajorColorNames_a[] = {
+extern const char* MajorColorNames_a[] = {
     "White", "Red", "Black", "Yellow", "Violet"
 };
 
-const char* MinorColorNames_a[] = {
+extern const char* MinorColorNames_a[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
 
